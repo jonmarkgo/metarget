@@ -8,6 +8,7 @@ import hmac
 import json
 import hashlib
 from base64 import urlsafe_b64decode, urlsafe_b64encode
+from facebookads.adobjects.customaudience import CustomAudience
 
 import requests
 from flask import Flask, request, redirect, render_template, url_for
@@ -164,13 +165,19 @@ def get_token():
 def index():
     # print get_home()
 
-
     access_token = get_token()
+
     channel_url = url_for('get_channel', _external=True)
     channel_url = channel_url.replace('http:', '').replace('https:', '')
 
     if access_token:
+        FacebookAdsApi.init(FB_APP_ID, FB_APP_SECRET, access_token)
+        audience = CustomAudience(parent_id='act_22983242')
+        audience[CustomAudience.Field.subtype] = CustomAudience.Subtype.custom
+        audience[CustomAudience.Field.name] = 'My new CA'
+        audience[CustomAudience.Field.description] = 'People who bought on my website'
 
+        audience.remote_create()
         me = fb_call('me', args={'access_token': access_token})
         fb_app = fb_call(FB_APP_ID, args={'access_token': access_token})
         likes = fb_call('me/likes',
