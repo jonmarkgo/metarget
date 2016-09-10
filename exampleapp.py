@@ -164,7 +164,7 @@ def get_token():
         return token
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/base.html', methods=['GET', 'POST'])
 def index():
     # print get_home()
 
@@ -218,6 +218,10 @@ def index():
 @app.route('/channel.html', methods=['GET', 'POST'])
 def get_channel():
     return render_template('channel.html')
+
+@app.route('/', methods=['GET', 'POST'])
+def get_channel():
+    return render_template('test.html')
 
 
 @app.route('/close/', methods=['GET', 'POST'])
