@@ -1,8 +1,10 @@
 certifi==2016.8.31
 chardet==2.3.0
+facebookads==2.7.1
 Flask==0.7.2
 Jinja2==2.6
 psycopg2==2.6.2
-requests==0.10.4
+requests==2.11.1
 simplejson==2.2.1
+six==1.10.0
 Werkzeug==0.7.1
