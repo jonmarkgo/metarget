@@ -31,6 +31,7 @@ def oauth_login_url(preserve_path=True, next_url=None):
 
     if app.config['FBAPI_SCOPE']:
         fb_login_uri += "&scope=%s" % ",".join(app.config['FBAPI_SCOPE'])
+    print(fb_login_uri)
     return fb_login_uri
 
 
@@ -174,7 +175,7 @@ def index():
     channel_url = channel_url.replace('http:', '').replace('https:', '')
 
     if access_token:
-       # print(access_token)
+        print(access_token)
         FacebookAdsApi.init(FB_APP_ID, FB_APP_SECRET, access_token[0])
         audience = CustomAudience(parent_id='act_22983242')
         audience[CustomAudience.Field.subtype] = CustomAudience.Subtype.custom
