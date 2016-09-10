@@ -156,7 +156,7 @@ def get_token():
         from urlparse import parse_qs
         r = requests.get('https://graph.facebook.com/oauth/access_token', params=params)
         token = parse_qs(r.content).get('access_token')
-        logging.info token
+        logging.info(token)
         return token
 
 
