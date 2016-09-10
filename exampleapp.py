@@ -160,7 +160,7 @@ def get_token():
         from urlparse import parse_qs
         r = requests.get('https://graph.facebook.com/oauth/access_token', params=params)
         token = parse_qs(r.content).get('access_token')
-        print(token)
+        # print(token)
         return token
 
 
@@ -174,6 +174,7 @@ def index():
     channel_url = channel_url.replace('http:', '').replace('https:', '')
 
     if access_token:
+        print(access_token)
         FacebookAdsApi.init(FB_APP_ID, FB_APP_SECRET, access_token[0])
         audience = CustomAudience(parent_id='act_22983242')
         audience[CustomAudience.Field.subtype] = CustomAudience.Subtype.custom
