@@ -31,6 +31,7 @@ def oauth_login_url(preserve_path=True, next_url=None):
 
     if app.config['FBAPI_SCOPE']:
         fb_login_uri += "&scope=%s" % ",".join(app.config['FBAPI_SCOPE'])
+    print(fb_login_uri)
     return fb_login_uri
 
 
