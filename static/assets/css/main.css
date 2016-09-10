@@ -2059,7 +2059,6 @@
 		font-weight: 400;
 		margin: 0 0 1em 0;
 	}
-
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -2077,6 +2076,7 @@
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+
 	}
 
 		input[type="text"]:invalid,

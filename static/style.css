@@ -1,0 +1,50 @@
+#main input[type="text"], #main input[type="password"], #main input[type="email"], #main select, #main textarea {
+    border-bottom-color: rgb(204,204,204);
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(0,0,0);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(0,0,0);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(0,0,0);
+    border-top-style: none;
+    border-top-width: 0px;
+    color: rgb(0,0,0);
+    cursor: auto;
+    display: inline-block;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-weight: bold;
+    letter-spacing: normal;
+    height: 24px;
+    margin-top: 0px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    text-align: start;
+    text-indent: 0px;
+    text-rendering: auto;
+    text-shadow: none;
+    text-transform: none;
+    width: 150px;
+    word-spacing: 0px;
+    writing-mode: horizontal-tb;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+}
+
+.conversation{
+    margin: 0 0 .5em 0;
+}
