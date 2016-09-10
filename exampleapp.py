@@ -157,7 +157,6 @@ def get_token():
         r = requests.get('https://graph.facebook.com/oauth/access_token', params=params)
         token = parse_qs(r.content).get('access_token')
         print(token)
-        sys.stdout.flush()
         return token
 
 
