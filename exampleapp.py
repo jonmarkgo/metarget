@@ -8,6 +8,9 @@ import hmac
 import json
 import hashlib
 from base64 import urlsafe_b64decode, urlsafe_b64encode
+from facebookads.api import FacebookAdsApi
+from facebookads import objects
+
 from facebookads.adobjects.customaudience import CustomAudience
 
 import requests
