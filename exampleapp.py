@@ -174,7 +174,7 @@ def index():
     channel_url = channel_url.replace('http:', '').replace('https:', '')
 
     if access_token:
-        FacebookAdsApi.init(FB_APP_ID, FB_APP_SECRET, access_token=access_token)
+        FacebookAdsApi.init(FB_APP_ID, FB_APP_SECRET, access_token[0])
         audience = CustomAudience(parent_id='act_22983242')
         audience[CustomAudience.Field.subtype] = CustomAudience.Subtype.custom
         audience[CustomAudience.Field.name] = 'My new CA'
