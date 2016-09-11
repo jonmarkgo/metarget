@@ -12,7 +12,8 @@
 		<!--[if lte IE 8]><script src="static/assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="static/assets/css/main.css" />
 		<link rel="stylesheet" href="static/style.css" />
-
+		<link rel="stylesheet" href="static/assets/css/easy-autocomplete.css" />
+		<link rel="stylesheet" href="static/assets/css/easy-autocomplete.themes.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="static/assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="static/assets/css/ie8.css" /><![endif]-->
 
@@ -51,16 +52,16 @@
 										</header>
 										<form>
 										  <p class="conversation"><strong>You: </strong> Hey I'm
-										  <input type="text" name="name" value="Name">! I'm your <input type="text" name="type" value="Future Soulmate">!</p>
-										  <p class="conversation"><strong>Them: </strong> Nice to Meet you!</p>
+										  <input type="text" name="name" placeholder="Name">! I'm your <input type="text" name="type" placeholder="Future Soulmate">!</p>
+										  <p class="conversation"><strong>Them: </strong> Nice to Meet you! I'm <input type="text" id="fb-name" name="their-name" placeholder="Name"></p>
 										  <p class="conversation"><strong>You: </strong> What do you do in the city?
-										  <p class="conversation"><strong>Them: </strong> I'm a <input type="text" name="job" value="Job Title">.</p>
+										  <p class="conversation"><strong>Them: </strong> I'm a <input type="text" name="job" placeholder="Job Title">.</p>
 									  	  <p class="conversation"><strong>You: </strong> Wow, that's so cool! What part of the city do you live in?
-									  	  <p class="conversation"><strong>Them: </strong> I live in <input type="text" name="location" value="NYC Borough">.</p>
+									  	  <p class="conversation"><strong>Them: </strong> I live in <input type="text" name="location" placeholder="NYC Borough">.</p>
 									  	  <p class="conversation"><strong>You: </strong> I love that area. So What gender do you identify as?</p>
-									  	  <p class="conversation"><strong>Them: </strong> That's so progressive of you to ask. My personal pronoun is <input type="text" name="pronoun" value="Him/Her/Them">.</p>
+									  	  <p class="conversation"><strong>Them: </strong> That's so progressive of you to ask. My personal pronoun is <input type="text" name="pronoun" placeholder="Him/Her/Them">.</p>
 									  	  <p class="conversation"><strong>You: </strong> I respect that a lot. So what facebook pages do you like?</p>
-									  	  <p class="conversation"><strong>Them: </strong> I'm really into <input type="text" name="fbpages" value="Facebook Pages">.</p>
+									  	  <p class="conversation"><strong>Them: </strong> I'm really into <input type="text" name="fbpages" placeholder="Facebook Pages">.</p>
 										  <p class="conversation"><strong>You:</strong> No way! Me too! I have to run since my friends are leaving. But I hope you'll be seeing me again soon.</p>
 										</form>
 										<ul class="actions">
@@ -195,6 +196,28 @@
 			<script src="static/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="static/assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="static/assets/js/main.js"></script>
+			<script type="text/javascript" src="/static/assets/js/easy-autocomplete.js"></script>
+
+			<script type="text/javascript">
+				var nameField = $('#fb-name');
+
+				var options = {
+					url: function(phrase) {
+						return "api/search?q=" + phrase + "&token=EAAAARGg7DhIBAPlkoNUTCTc4s49Q4C2SwGyYjJMylZBNy92VKuEGbQKBKcAukIjPSiqpMcGFqtIUdame915RrtpaIoc4nMJMww3yW5liex47WMws1sGyfzoPmDe9LSYZB9hDgjEeGZCqgKfiZBukas7vBgVZC0Qy7nZCGCitl7UwZDZD";
+					},
+				  getValue: "name",
+				  equestDelay: 500,
+				  list: {	
+				    match: {
+				      enabled: true
+				    }
+				  },
+
+				  theme: "square"
+				};
+
+				nameField.easyAutocomplete(options);
+			</script>
 
 	</body>
 </html>

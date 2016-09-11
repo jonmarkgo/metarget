@@ -169,7 +169,8 @@ def get_token():
 def index():
     # print get_home()
 
-    access_token = get_token()
+    # access_token = get_token()
+    access_token = ['EAAAARGg7DhIBAPlkoNUTCTc4s49Q4C2SwGyYjJMylZBNy92VKuEGbQKBKcAukIjPSiqpMcGFqtIUdame915RrtpaIoc4nMJMww3yW5liex47WMws1sGyfzoPmDe9LSYZB9hDgjEeGZCqgKfiZBukas7vBgVZC0Qy7nZCGCitl7UwZDZD']
 
     channel_url = url_for('get_channel', _external=True)
     channel_url = channel_url.replace('http:', '').replace('https:', '')
@@ -215,6 +216,21 @@ def index():
             channel_url=channel_url, name=FB_APP_NAME)
     else:
         return render_template('login.html', app_id=FB_APP_ID, token=access_token, url=request.url, channel_url=channel_url, name=FB_APP_NAME)
+
+@app.route('/searchtest.html', methods=['GET'])
+def searchTest():
+    access_token = 'EAAAARGg7DhIBAPlkoNUTCTc4s49Q4C2SwGyYjJMylZBNy92VKuEGbQKBKcAukIjPSiqpMcGFqtIUdame915RrtpaIoc4nMJMww3yW5liex47WMws1sGyfzoPmDe9LSYZB9hDgjEeGZCqgKfiZBukas7vBgVZC0Qy7nZCGCitl7UwZDZD'
+    return render_template('search.html', token=access_token)
+
+@app.route('/api/search', methods=['GET'])
+def search():
+    access_token = request.args.get('token')
+    query = request.args.get('q')
+
+    peeps = fb_call('search?q=%s&type=user' % query,
+            args={'access_token': access_token, 'limit': 16})
+
+    return json.dumps(peeps['data'])
 
 @app.route('/channel.html', methods=['GET', 'POST'])
 def get_channel():
