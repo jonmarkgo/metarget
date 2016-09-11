@@ -240,6 +240,10 @@ def get_channel():
 def get_channel():
     return render_template('test.html')
 
+@app.route('/loading.html', methods=['GET', 'POST'])
+def get_channel():
+    return render_template('loading.html')
+
 
 @app.route('/close/', methods=['GET', 'POST'])
 def close():
