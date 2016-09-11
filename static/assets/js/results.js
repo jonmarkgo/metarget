@@ -19,10 +19,10 @@ function loadRachels(){
 		var rachel = '<div class="person">'+
 					 	'<img src="static/images/rachels/r' + (i+1) + '.jpg">'+
 					 	'<div class="details">' +
-							'<div class="name">' + names[i] + '</div>'+ 
+							'<div class="name">' + names[i] + '</div>'+
 							'<div class="job">Publicist</div>'+
 						'</div>'+
-						'<button>Target With Love</button>'+
+						'<button><a href="loading.html">Target With Love</a></button>'+
 					 '</div>';
 		table.append(rachel);
 	}
