@@ -12,6 +12,7 @@
     border-left-width: 0px;
     border-right-color: rgb(0,0,0);
     border-right-style: none;
+    background-color: rgba(0, 0, 0, 0);
     border-right-width: 0px;
     border-top-color: rgb(0,0,0);
     border-top-style: none;
@@ -29,15 +30,15 @@
     height: 24px;
     margin-top: 0px;
     padding-bottom: 1px;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 1px;
     text-align: start;
     text-indent: 0px;
     text-rendering: auto;
     text-shadow: none;
     text-transform: none;
-    width: 150px;
+    width: 250px;
     word-spacing: 0px;
     writing-mode: horizontal-tb;
     -webkit-appearance: none;
