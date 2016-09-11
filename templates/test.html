@@ -52,7 +52,9 @@
 										</header>
 										<form>
 										  <p class="conversation"><strong>You: </strong> Hey I'm
-										  <input type="text" name="name" placeholder="Name">! I'm your <input type="text" name="type" placeholder="Future Soulmate">!</p>
+										  <input class="button" type="text" name="name" placeholder="Name">!</p>
+										  <p class="conversation"><input type="button" id="loadPhoto" value="Upload Your Photo" onclick="document.getElementById('file').click();" />
+										  <input type='file' id='file' onchange="readURL(this);" / style="display:none;"></p>
 										  <p class="conversation"><strong>Them: </strong> Nice to Meet you! I'm <input type="text" id="fb-name" name="their-name" placeholder="Name"></p>
 										  <p class="conversation"><strong>You: </strong> What do you do in the city?
 										  <p class="conversation"><strong>Them: </strong> I'm a <input type="text" name="job" placeholder="Job Title">.</p>
@@ -63,13 +65,24 @@
 									  	  <p class="conversation"><strong>You: </strong> I respect that a lot. So what facebook pages do you like?</p>
 									  	  <p class="conversation"><strong>Them: </strong> I'm really into <input type="text" name="fbpages" placeholder="Facebook Pages">.</p>
 										  <p class="conversation"><strong>You:</strong> No way! Me too! I have to run since my friends are leaving. But I hope you'll be seeing me again soon.</p>
+    									  <script type="text/javascript">
+    									  	function readURL(input) {
+										        if (input.files && input.files[0]) {
+										            var reader = new FileReader();
+										            reader.onload = function (e) {
+										                $('#blah')
+										                    .attr('src', e.target.result)
+										            };
+										            reader.readAsDataURL(input.files[0]);
+										        }
+										    }
+    									  </script>
 										</form>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Create targeted ad campaign</a></li>
 										</ul>
 									</div>
-
-									<span class="image"><img src="static/images/pic01.jpg" alt="" /></span>
+									<span class="image"><img id="blah" src="static/images/pic01.jpg" alt="your image"></span>
 								</div>
 							</section>
 
@@ -199,6 +212,7 @@
 			<script type="text/javascript" src="/static/assets/js/easy-autocomplete.js"></script>
 
 			<script type="text/javascript">
+
 				var nameField = $('#fb-name');
 
 				var options = {
@@ -207,7 +221,7 @@
 					},
 				  getValue: "name",
 				  equestDelay: 500,
-				  list: {	
+				  list: {
 				    match: {
 				      enabled: true
 				    }
