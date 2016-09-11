@@ -236,12 +236,12 @@ def search():
 def get_channel():
     return render_template('channel.html')
 
-@app.route('/', methods=['GET', 'POST'])
-def get_channel():
+@app.route('/')
+def get_home():
     return render_template('test.html')
 
 @app.route('/loading.html', methods=['GET', 'POST'])
-def get_channel():
+def get_loading():
     return render_template('loading.html')
 
 
