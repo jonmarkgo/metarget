@@ -244,6 +244,9 @@ def get_channel():
 def get_channel():
     return render_template('loading.html')
 
+@app.route('/results.html', methods=['GET', 'POST'])
+def results():
+    return render_template('results.html')
 
 @app.route('/close/', methods=['GET', 'POST'])
 def close():
