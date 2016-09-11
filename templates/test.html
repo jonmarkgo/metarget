@@ -27,7 +27,7 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="static/images/logo.png" alt="" /></span>
 						<h1>MeTarget</h1>
-						<p>Flavor Text</p>
+						<!-- <p>Flavor Text</p> -->
 					</header>
 
 				<!-- Nav -->
@@ -53,9 +53,7 @@
 										<form>
 										  <p class="conversation"><strong>You: </strong> Hey I'm
 										  <input class="button" type="text" name="name" placeholder="Name">!</p>
-										  <p class="conversation"><input type="button" id="loadPhoto" value="Upload Your Photo" onclick="document.getElementById('file').click();" />
-										  <input type='file' id='file' onchange="readURL(this);" / style="display:none;"></p>
-										  <p class="conversation"><strong>Them: </strong> Nice to Meet you! I'm <input type="text" id="fb-name" name="their-name" placeholder="Name"></p>
+										  <p class="conversation"><strong>Them: </strong> Nice to Meet you! <!-- I'm <input type="text" id="fb-name" name="their-name" placeholder="Name"></p> -->
 										  <p class="conversation"><strong>You: </strong> What do you do in the city?
 										  <p class="conversation"><strong>Them: </strong> I'm a <input type="text" name="job" placeholder="Job Title">.</p>
 									  	  <p class="conversation"><strong>You: </strong> Wow, that's so cool! What part of the city do you live in?
@@ -65,6 +63,8 @@
 									  	  <p class="conversation"><strong>You: </strong> I respect that a lot. So what facebook pages do you like?</p>
 									  	  <p class="conversation"><strong>Them: </strong> I'm really into <input type="text" name="fbpages" placeholder="Facebook Pages">.</p>
 										  <p class="conversation"><strong>You:</strong> No way! Me too! I have to run since my friends are leaving. But I hope you'll be seeing me again soon.</p>
+									      <p class="conversation"><input type="button" id="loadPhoto" value="Upload Your Photo" onclick="document.getElementById('file').click();" />
+										  <input type='file' id='file' onchange="readURL(this);" / style="display:none;"></p>
     									  <script type="text/javascript">
     									  	function readURL(input) {
 										        if (input.files && input.files[0]) {
