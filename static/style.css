@@ -49,5 +49,22 @@
 
 .conversation{
     margin: 0 0 .5em 0;
+    font-size: 24px;
+}
+
+#budget{
     font-size: 18px;
+}
+
+.submit{
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    display: block !important;
+}
+
+.submit a{
+    background: #ffe6e6 !important;
+    font-weight: bold;
+    width: 100%;
 }

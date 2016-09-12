@@ -63,7 +63,16 @@
 									  	  <p class="conversation"><strong>You: </strong> I respect that a lot. So what facebook pages do you like?</p>
 									  	  <p class="conversation"><strong>Them: </strong> I'm really into <input type="text" name="fbpages" placeholder="Facebook Pages">.</p>
 										  <p class="conversation"><strong>You:</strong> No way! Me too! I have to run since my friends are leaving. But I hope you'll be seeing me again soon.</p>
-									      <p class="conversation"><input type="button" id="loadPhoto" value="Upload Your Photo" onclick="document.getElementById('file').click();" />
+
+    									  <p class="conversation" id="budget">Set your budget based on how much potential you think this relationship has: <input type="text" name="cost" placeholder="$"></p>
+										</form>
+									</div>
+								</div>
+								<div class="spotlight">
+									<div class="content">
+										
+										<form>
+									      <p class="conversation"><input type="button" id="loadPhoto" value="Upload Your Photo or GIF" onclick="document.getElementById('file').click();" />
 										  <input type='file' id='file' onchange="readURL(this);" / style="display:none;"></p>
     									  <script type="text/javascript">
     									  	function readURL(input) {
@@ -77,14 +86,14 @@
 										        }
 										    }
     									  </script>
-    									  <p>Set your budget based on how much potential you think this relationship has: <input type="text" name="cost" placeholder="$"></p>
 										</form>
-										<ul class="actions">
-											<li><a href="loading.html" class="button">Create targeted ad campaign</a></li>
-										</ul>
+										
 									</div>
 									<span class="image"><img id="blah" src="static/images/pic01.jpg" alt="your image"></span>
 								</div>
+								<ul class="actions">
+											<li class="submit"><a href="loading.html" class="button">Create Targeted Ad Campaign</a></li>
+										</ul>
 							</section>
 
 						<!-- First Section
